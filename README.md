@@ -7,3 +7,11 @@
 
 [`Cuda Checker`'s documentation](https://cuda-checker.readthedocs.io/)
 ---
+
+
+
+## Usage
+```sh
+$ pip install cuda-checker
+$ cuda-checker # show CUDA properties on each TensowFlow and PyTorch.
+```
