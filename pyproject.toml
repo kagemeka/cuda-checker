@@ -10,32 +10,31 @@ classifiers = [
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
 ]
-description = "This is a template for python projects."
-documentation = "https://python-project-templates.readthedocs.io"
+description = "NVIDIA CUDA checker for pythonn deeplearning project."
+documentation = "https://cuda-checker.readthedocs.io"
 exclude = [
   "**/tests/",
   "**/*_test.py",
   "**/test_*.py",
   "**/_test_*.py",
 ]
-homepage = "https://github.com/kagemeka/python-project-template/#readme"
+homepage = "https://github.com/kagemeka/cuda-checker#readme"
 include = []
-keywords = ["template", "python"]
+keywords = ["cuda", "python", "deeplearning", "tensorflow", "pytorch"]
 license = "MIT"
 maintainers = ["Hiroshi Tsuyuki <kagemeka1@gmail.com>"]
-name = "python-project-templates"
+name = "cuda-checker"
 packages = [
-  {include = "package_1", from = "src"},
-  {include = "package_2", from = "src"},
+  {include = "cuda_checker", from = "src"},
 ]
 readme = "README.md"
-repository = "https://github.com/kagemeka/python-project-template"
-version = "0.1.3"
+repository = "https://github.com/kagemeka/cuda-checker"
+version = "0.1.0"
 
 [tool.poetry.dependencies]
-optext-python = "0.1.1"
-python = ">=3.8,<3.11"
-
+python = ">=3.9,<3.10"
+tensorflow = "2.7.0"
+torch = "^"
 # [[tool.poetry.source]]
 # name = 'private'
 # url = 'http://example.com/simple'
@@ -86,19 +85,7 @@ types-requests = "^"
 types-setuptools = "^"
 
 [tool.poetry.scripts]
-# commands listed here can be invoked from terminal.
-sample-command = "package_2.__main__:main" # run `sample-command`
-
-[tool.poetry.plugins."console_scripts"]
-# for details aboud plugins (or entry_points), see
-# https://python-poetry.org/docs/pyproject/#plugins
-# https://setuptools.pypa.io/en/latest/userguide/entry_point.html
-# https://docs.python.org/3/library/importlib.metadata.html
-# 'console_scripts' section is same to 'poetry.scripts'
-add-1-2 = "package_1.__main__:main"
-
-[tool.poetry.plugins."pseudo_package.plugin"]
-sample-plugin = "package_1.plugins:plugin_call"
+cuda-checker = "cuda_checker.cli:main"
 
 [tool.poetry.urls]
 "Twitter" = "https://twitter.com/kagemeka"
@@ -160,7 +147,8 @@ disallow_untyped_calls = true
 disallow_untyped_decorators = true
 disallow_untyped_defs = true
 error_summary = true
-exclude = ["docs/"]
+exclude = ["docs/", "src/cuda_checker/check.py"]
+follow_imports = "skip"
 ignore_missing_imports = true
 no_implicit_optional = true
 no_implicit_reexport = true
