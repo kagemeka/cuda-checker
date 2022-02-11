@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install CUDA
-        run:
+        run: |
           apt update
           apt install -y nvidia-cuda-toolkit
       - name: Install poetry
