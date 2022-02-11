@@ -29,7 +29,7 @@ packages = [
 ]
 readme = "README.md"
 repository = "https://github.com/kagemeka/cuda-checker"
-version = "0.1.0"
+version = "0.1.1"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.10"
@@ -85,10 +85,7 @@ types-requests = "^"
 types-setuptools = "^"
 
 [tool.poetry.scripts]
-cuda-checker = "cuda_checker.cli:main"
-
-[tool.poetry.urls]
-"Twitter" = "https://twitter.com/kagemeka"
+cuda-checker = "cuda_checker.cli:check"
 
 # FORMATTING ------------------------------------------------------------------------------
 [tool.black]

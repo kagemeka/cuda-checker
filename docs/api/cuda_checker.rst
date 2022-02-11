@@ -12,6 +12,14 @@ cuda\_checker.check module
    :undoc-members:
    :show-inheritance:
 
+cuda\_checker.cli module
+------------------------
+
+.. automodule:: cuda_checker.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 

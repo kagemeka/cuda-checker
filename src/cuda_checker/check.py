@@ -44,6 +44,11 @@ def get_tensorflow_properties() -> CudaPropertiesTensorFlow:
         physical_devices=tensorflow.config.list_physical_devices(),
         logical_devices=tensorflow.config.list_logical_devices(),
     )
-    print(type(properties.physical_devices[0]))
     _LOGGER.info(properties)
     return properties
+
+
+if __name__ == "__main__":
+    import doctest
+
+    doctest.testmod(verbose=True)
