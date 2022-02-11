@@ -1,18 +1,18 @@
-version: '3.9'
-
 services:
   package_dev:
     build:
       context: .
       dockerfile: Dockerfile
-    image: kagemeka/python-project-template:latest
+    image: kagemeka/$PROJECT:latest
     restart: on-failure
+    runtime: nvidia
     tty: true
     volumes:
-      - type: bind
+      - read_only: false
         source: $ROOT
         target: /root/$PROJECT
+        type: bind
         volume:
           nocopy: true
-        read_only: false
     working_dir: /root/$PROJECT
+version: '3.9'
