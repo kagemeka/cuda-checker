@@ -29,11 +29,11 @@ packages = [
 ]
 readme = "README.md"
 repository = "https://github.com/kagemeka/cuda-checker"
-version = "0.1.1"
+version = "0.2.0"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.10"
-tensorflow = "2.7.0"
+tensorflow = "^"
 torch = "^"
 # [[tool.poetry.source]]
 # name = 'private'
