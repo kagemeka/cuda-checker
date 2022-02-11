@@ -35,5 +35,5 @@ jobs:
       - name: format and lint and test
         run: |
           source $HOME/.poetry/env
-      # no test 
+      # no test
           ./scripts/ci_no_test.sh
